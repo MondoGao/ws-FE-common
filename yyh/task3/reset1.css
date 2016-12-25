@@ -1,0 +1,26 @@
+body,ul,li,p,h1,h2,h3,img,a{
+	margin: 0;
+	padding: 0;
+}
+ul,li{
+	list-style-type: none;
+   
+}
+a{
+	text-decoration-line: none;
+	list-style-type: none;
+}
+img{
+	border: none;
+	display: block;
+}
+.clearfloat{
+	zoom:1;
+}
+.clearfloat:after{
+	display: block;
+	clear: both;
+	content: --;
+	visibility: hidden;
+	height: 0;
+}

@@ -1,0 +1,129 @@
+/*myfruit*/
+   .content{
+    width: 1000px;
+    height: 600px;
+    background-image: url(picture-red/red2.jpg);
+    background-size: 100% 100%;
+    margin: auto;
+   }
+   .adv-wrapper{
+    background-color: rgba(246,156,131,0,3);
+    width: 1000px;
+    height: 40px;
+    margin-left: 0;
+   }
+   .myfruit{
+    color: rgb(163,7,63);
+    display: block;
+    line-height: 40px;
+    overflow: hidden;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    text-align: right;
+    max-width: 976px;
+    margin: 0 auto;
+    font-size: 15px;
+   }
+   
+   /*导航栏*/
+   .ac-gn-content1 {
+   	width: 1000px;
+   	height: 44px;
+   	background-color:rgba(246,156,131,0,3);
+    margin-right: 0; 
+    margin-top: 0;
+    }
+   .ac-gn-header{
+    width: 800px;
+    height: 44px;
+    text-align: center;
+    margin-top: 0;
+    margin-left: 300px;
+   }
+   .apple-1{
+    background: url(/img/apple.1.png) no-repeat;
+    margin-top: 1px;
+    margin-right: 45px;
+   }
+   .fdj{
+    background: url(/img/fdj.png) no-repeat;
+    margin-top: 7px;
+    margin-left:20px; 
+   }
+   .suo{
+    background: url(/img/suo.png) no-repeat;
+    margin-top: 7px;
+    margin-left: 30px;
+   } 
+   .ac-gn-header li{
+    line-height: 44px;
+    width: 60px;
+    height: 44px;
+    float: left;
+    text-align: center;
+   	list-style-type: none;
+   	text-decoration: none;
+    font-size: 15px;
+    margin:0 25px;
+   }
+   .ac-gn-header a{
+    height: 44px;
+    line-height: 44px;
+    width: 60px;
+   	display: inline-block;
+   	color: rgb(255,255,255);
+   	text-decoration: none;
+    text-align: center;
+   }
+
+   .ac-gn-header li a:hover{
+    color: rgb(73,168,220);
+   }
+   /*middle*/
+   .ac-gn-content2{
+    height: 250px;
+    width: 800px;
+    margin:auto;
+    padding-top: 100px;
+   }
+   .title1{
+    width: 300px;
+    font-size: 60px;
+    margin:auto;
+    text-align: center;
+    color:rgb(245,245,245);
+   }
+   .title2{
+    padding-top: 40px;
+    padding-left: 30px;
+    height: 50px;
+    width: 400px;
+    margin:auto;
+    color: rgb(245,245,245);
+   }
+   /*button*/
+   .btn-box{
+            width: 260px;
+            height: auto;
+            margin: auto;
+
+        }
+   .btn-box button{
+            width: 240px;
+            height: 80px;
+            border: 1px solid rgb(163,7,63);
+            background-color: rgb(211,0,56);
+            border-radius: 5px;
+            font-size: 28px;
+            margin: 0 15px;
+            color: rgb(255,255,255);
+            outline: none;
+            border-radius: 30px;
+
+        }
+        .btn-box button:hover{
+            background-color: rgb(218,44,82);
+            color: rgb(255,255,255);
+        }
+
+
