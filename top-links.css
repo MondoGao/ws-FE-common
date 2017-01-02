@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+.top-links{height:52px;line-height:50px;background-color:#080810;color:#fff;font-size:0;border-top:1px solid #212128;border-bottom:1px solid #212128;position:relative;z-index:5}
+.top-links .list-link, .top-links .share-link{height:50px;line-height:50px;display:inline-block;vertical-align:middle;*display:inline;*zoom:1}.top-links .list-link{width:calc(100% - 200px)}
+.top-links .list-link li{height:100%;text-align:center;width:calc(100% / 5);display:inline-block;vertical-align:middle;*display:inline;*zoom:1}
+.top-links .list-link a{letter-spacing:2px;display:inline-block;vertical-align:middle;*display:inline;*zoom:1;width:100%;font-size:11px;font-family:"montserratbold";text-transform:uppercase;-webkit-font-smoothing:antialiased;color:#fff;opacity:.4;filter:alpha(opacity=40);position:relative;z-index:3}
+.top-links .list-link li+li{border-left:1px solid #212128}
+.top-links .list-link .active a{opacity:1;filter:alpha(opacity=100)}
+.top-links .share-link{width:50px;text-align:center}
+.top-links .share-link a{font-size:12px;display:inline-block;vertical-align:middle;*display:inline;*zoom:1;width:100%;height:100%;color:#757581;border-left:1px solid #212128;-webkit-transition:background-color 0.3s ease-in-out,color 0.2s ease-in-out;-o-transition:background-color 0.3s ease-in-out,color 0.2s ease-in-out;transition:background-color 0.3s ease-in-out,color 0.2s ease-in-out}
+.top-links .share-link.facebook a:hover{color:#fff;background-color:#3b5998}
+.top-links .share-link.twitter a:hover{color:#fff;background-color:#00aced}
+.list-link a{-webkit-transition:opacity 0.5s ease-in-out,color 0.5s ease-in-out;-o-transition:opacity 0.5s ease-in-out,color 0.5s ease-in-out;transition:opacity 0.5s ease-in-out,color 0.5s ease-in-out}
+.list-link li{position:relative}
+.list-link li .hover{display:block;width:100%;height:100%;position:absolute;left:0;top:0;opacity:0;visibility:hidden;-webkit-transition:opacity 0.5s ease-in-out,visibility 0.5s ease-in-out;-o-transition:opacity 0.5s ease-in-out,visibility 0.5s ease-in-out;transition:opacity 0.5s ease-in-out,visibility 0.5s ease-in-out}.list-link li:hover .hover{opacity:1;visibility:visible}.list-link li:hover a{opacity:1}
+
