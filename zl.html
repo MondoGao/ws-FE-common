@@ -3,11 +3,25 @@
 <head>
 <meta charset="utf-8">
 <title>Poison</title>
+<style>
+*{margin: 0;padding:0;list-style: none;border:none;}
+body{background:#efefef;}
+.content{padding:0 5px;width:920px;background:#000;margin:50px auto;}/*主要用来美化样式*/
+#scrollpic{position:relative;height:500px;width:1000px;overflow: hidden;}
+#prev,#next{display:block;height:166px;width:250px;background:#fff;position:absolute;top:0;opacity: 0;z-index:10;}
+#prev{left:0;}
+#next{right:0;}
+#scrollpic ul{position:absolute;height:166px;}
+#scrollpic ul li{float:left;padding:5px;height:156px;width:220px;}
+#scrollpic ul li img{width:220px;height:156px;}
+
+p{font:normal 14px/2 'microsoft yahei';color:#333;}
+</style>
 <link rel="stylesheet" href="top-links.css" type="text/css" />
 </head>
 
 </head>
-<body class="home blog not_ie loading-f clrz_is_tpl_home">
+<body class="home blog not_ie loading-f clrz_is_tpl_home" bgcolor="#000000">
 
 <div class="top-links">
     <nav class="no-js full-container hidden-sm hidden-xs topbar-nav">
@@ -36,5 +50,58 @@
             
     </nav>
 </div>
+<div class="content">
+	<div id="scrollpic">
+		<a href="javascript:;" id="prev"></a>
+		<ul>
+			<li><a href="#"><img src="../imgs/acmilan.jpg"/></a></li>
+			<li><a href="#"><img src="../imgs/Lukaku.png"/></a></li>
+			<li><a href="#"><img src="../imgs/Ronaldinho.jpg"/></a></li>
+			<li><a href="#"><img src="../imgs/Ronaldo.jpg"/></a></li>
+			<li><a href="#"><img src="../imgs/Sturridge.jpg"/></a></li>
+			<li><a href="#"><img src="../imgs/Totti.jpg"/></a></li>
+		</ul>
+		<a href="javascript:;" id="next"></a>
+	</div>
+	</div>
+<script type="text/javascript">
+window.onload = function(){
+	//操作dom
+	var oPicList = document.getElementById("scrollpic");
+	var oUl = oPicList.getElementsByTagName("ul")[0];
+	var aLi = oUl.getElementsByTagName("li");
+	var aPrev = document.getElementById("prev");
+	var aNext = document.getElementById("next");
+	oUl.innerHTML+=oUl.innerHTML;
+	oUl.style.width = aLi[0].offsetWidth * aLi.length + "px";
+	oUl.style.left =-oUl.offsetWidth/2;
+	var speed = 1;
+	//控制滚动
+	function movePic(){
+		if(oUl.offsetLeft<=-oUl.offsetWidth/2){
+			oUl.style.left = "0";
+		}
+		if(oUl.offsetLeft>0){
+			oUl.style.left = -oUl.offsetWidth/2;
+		}
+		oUl.style.left = oUl.offsetLeft + speed +"px";
+	}
+	var timer = setInterval(movePic,30);
+	//鼠标操作 暂停/滚动
+	oUl.onmouseover = function(){
+		clearInterval(timer);
+	}
+	oUl.onmouseout = function(){
+		timer = setInterval(movePic,30);
+	}
+	//控制图片左右滚动
+	aPrev.onmouseover=function(){
+		speed=1;
+	}
+	aNext.onmouseover=function(){
+		speed=-1;
+	}
+}
+</script>                  
 </body>
 </html>
