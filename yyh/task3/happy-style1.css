@@ -2,7 +2,7 @@
    .content{
     width: 100%;
     height: 600px;
-    background-image: url(picture-red/red2.jpg);
+    background-image: url(red2.jpg);
     background-size: cover;
     margin: auto;
    }
@@ -40,7 +40,7 @@
     margin-top: 0;
     margin-left: 750px;
    }
-   .apple-1{
+  /* .apple-1{
     background: url(/img/apple.1.png) no-repeat;
     margin-top: 1px;
     margin-right: 45px;
@@ -54,7 +54,7 @@
     background: url(/img/suo.png) no-repeat;
     margin-top: 7px;
     margin-left: 30px;
-   } 
+   } */
    .ac-gn-header li{
     line-height: 44px;
     width: 60px;
