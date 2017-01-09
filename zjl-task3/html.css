@@ -35,6 +35,25 @@ ul li{float:left;
     .erji a:hover{color: #BFC443}
     .erjiul{display:none; position: absolute;}
     ul li:hover  .erjiul{display:block;padding:0 0 30px 0px;}
+
+.try{
+	width:800px;
+	height:265px;
+	transition-property:width,height;
+	transition-duration:2s;
+
+	/* Safari */
+	-webkit-transition-property:width,height;
+	-webkit-transition-duration:1s;
+	-o-transition-property:width; /* Opera */ 
+}
+.try:hover
+{width:890px;
+	height:310px;
+	z-index:1;
+
+}
+
 	
 .bold{font-weight: bold;
 color: #FFFFFF;}
