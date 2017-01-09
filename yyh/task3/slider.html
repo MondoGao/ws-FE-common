@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> test Elastic Image Slideshow </title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{padding: 0;
+			margin:0;
+		}
+		body{
+			padding: 50px 0;
+			background-color: #FFF;
+			font-size: 14px;
+			font-family:'Avenir14px; color:#555; Next';
+			-webkit-font-smoothing:antialiased;/*字体抗锯齿*/
+		}
+		.slider .main .main-i,
+		.slider .main,
+		.slider{
+           width: 95%;
+           height: 700px;
+           position: relative;
+		}
+		/*ppt aera*/
+		.slider .main{
+           overflow: hidden;
+		}
+		/*each ppt style*/
+		.slider .main .main-i{}
+		.slider .main .main-i img{
+			width: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+
+		}
+		.slider .main .main-i .caption{
+			position: absolute;
+			right: 50%;
+			top:30%;
+			z-index: 8;
+		}
+		.slider .main .main-i .caption h2{
+			font-size: 40px;
+			line-height: 50px;
+			color: rgb(218,134,111);
+			text-align: right;
+		}
+		.slider .main .main-i .caption h3{
+			font-size: 70px;
+			line-height:70px;
+			color: rgb(254,75,97);
+			text-align: right;
+			font-family: 'Open Sans Condensed';
+		}
+		/*control button*/
+		.slider .ctrl{
+        width: 100%;
+        height: 13px;
+        line-height: 13px;
+        text-align: center;
+        position: absolute;
+        left: 0;
+        bottom: -13px;
+      
+		}
+		.slider .ctrl .ctrl-i{
+          display: inline-block;
+          width: 150px;
+          height: 13px;
+          background-color: #666;
+          box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+          position: relative;
+          margin-left: 1px;
+		}
+		.slider .ctrl .ctrl-i img{
+             width: 100%;
+             position: absolute;
+             left: 0;
+             bottom: 50px;
+             z-index: 1;
+              opacity: 0;
+             -webkit-transition:all .2s;
+
+		}
+		/*hover 到控制按钮的样式*/
+		.slider .ctrl .ctrl-i:hover{
+			background-color: #F0F0F0;
+		}
+		.slider .ctrl .ctrl-i:hover img{
+			bottom:13px;
+			-webkit-box-reflect:below 0px -webkit-gradient(
+                 linear,
+                 left top,
+                 left bottom,
+                 from( transparent ),
+                 color-stop (50%, transparent ),
+                 to (rgba(255,255,255,.3) )
+               );
+			opacity: 1;
+		}
+		/*active now show*/
+		.slider .ctrl .ctrl-i_active:hover,
+		.slider .ctrl .ctrl-i_active{
+			background-color: #000;
+
+		}
+		.slider .ctrl .ctrl-i_active:hover img{
+			opacity: 0;
+		}
+         /*ppt 切换*/
+         .slider .main .main-i{
+         	opacity: 0;
+         	position: absolute;
+         	right: 50%;
+         	top: 0;
+         	-webkit-transition:all .5s;
+         }
+         .slider .main .main-i h2{
+           margin-right: 45px;
+         }
+         .slider .main .main-i h3{
+           margin-right: -45px;
+         }
+         /*过渡动画*/
+         .slider .main .main-i h2,
+         .slider .main .main-i h3{
+         	-webkit-transition:all .8s 1s;
+         }
+         .slider .main .main-i_active{
+           opacity: 1;
+           right: 0;
+         }
+         .slider .main .main-i_active h2,
+         .slider .main .main-i_active h3{
+          margin-right: 0px;
+
+ }
+	</style>
+
+</head>
+<body>
+    <div class="slider">
+
+    	<div class="main">
+    		<div class="main-i ">
+    			<div class="caption">
+    				<h2>Raspberry</h2>
+    				<h3>Lovely</h3>
+    			</div>
+    			<img src="1.jpg">
+    		</div>
+            <div class="main-i ">
+                <div class="caption">
+                    <h2>Tomato</h2>
+                    <h3>Honest</h3>
+                </div>
+                <img src="2.jpg">
+            </div>
+            <div class="main-i">
+                <div class="caption">
+                    <h2>Orange</h2>
+                    <h3>Brave</h3>
+                </div>
+                <img src="3.jpg">
+            </div>
+            <div class="main-i">
+                <div class="caption">
+                    <h2>Pomegrante</h2>
+                    <h3>Radient</h3>
+                </div>
+                <img src="4.jpg">
+            </div>
+            <div class="main-i">
+                <div class="caption">
+                    <h2>Peach</h2>
+                    <h3>Generous</h3>
+                </div>
+                <img src="5.jpg">
+            </div>
+            <div class="main-i">
+                <div class="caption">
+                    <h2>Gooseberry</h2>
+                    <h3>Romantic</h3>
+                </div>
+                <img src="6.jpg">
+            </div>
+            <div class="main-i main-i_active">
+                <div class="caption">
+                    <h2>Colorful</h2>
+                    <h3>Delicious</h3>
+                </div>
+                <img src="7.jpg">
+            </div>
+    	    </div>
+    	<div class="ctrl" >
+    		<a class="ctrl-i " href="javascript:;"><img src="1.jpg" /></a><a class="ctrl-i " href="javascript:;"><img src="2.jpg" /></a><a class="ctrl-i " href="javascript:;"><img src="3.jpg" /></a><a class="ctrl-i " href="javascript:;"><img src="4.jpg" /></a><a class="ctrl-i " href="javascript:;"><img src="5.jpg" /></a><a class="ctrl-i " href="javascript:;"><img src="6.jpg" /></a><a class="ctrl-i ctrl-i_active" href="javascript:;"><img src="7.jpg" /></a>
+    	</div>
+       <!-- <script type="text/javascript">
+        	//1.数据定义
+        	var data = [
+        	{img:1,h1:'Raspberry',h2:'Lovely'},
+        	{img:2,h1:'Tomato',h2:'Honest'},
+        	{img:3,h1:'Orange',h2:'Brave'},
+        	{img:4,h1:'Pomegrante',h2:'Radient'},
+        	{img:5,h1:'Peach',h2:'Generous'},
+        	{img:6,h1:'Gooseberry',h2:'Romantic'},
+        	{img:7,h1:'Colorful',h2:'Delicious'}
+        	];
+
+        	//2.通用函数
+        	var g = function (id) {
+        		if( id.substr(0,1) == '.'){
+                   return document.getElementsByClassName(id.substr;(1));
+        		}
+        		return document.getElementById(id);
+        	}
+
+        	//3.添加幻灯片以及按钮
+        	function addSliders() {
+        		//3.1获取模版
+        		var tpl_main = g('template_main').innerHTML
+        		                   .replace(/^\s*/,'')
+        		                   .replace(/\s*$/,'');
+        	    var tpl_ctrl = g('template_ctrl').innerHTML
+        		                   .replace(/^\s*/,'')
+        		                   .replace(/\s*$/,'');
+        	    //3.2 定义最终输出 HTML 的变量
+                var out_main = [];
+                var out_ctrl = [];
+        		                          
+                //b遍历所有数据
+                for ( i in data){
+                    var _html_main = tpl_main
+                             .replace(/{{index}}/g,data[i].img)
+                             .replace(/{{h2}}/g,data[i].h1)
+                             .replace(/{{h3}}/g,data[i].h2);
+                    
+                    var _html_ctrl = tpl_ctrl
+                             .replace(/{{index}}/g,data[i].img);
+
+                    out_main.push(_html_main);
+                    out_ctrl.push(_html_ctrl);
+                }
+                //3.4 把HTML回写到对应的DOM里
+                g('template_main').innerHTML = out_main.join('');
+                g('template_ctrl').innerHTML = out_ctrl.join('');
+            }
+           //5.幻灯片切换
+           function switchSlider(n){
+                //5.1 获得要展现的幻灯片和控制按钮 DOM
+                var main = g('main_'+n);
+                var ctrl = g('ctrl_'+n);
+
+                //5.2 获得所有的幻灯片以及控制按钮
+                var clear_main = g('.main-i');
+                var clear_ctrl = g('.ctrl-i');
+                //5.3 清除它们的active样式
+                for(i=0;i<clear-ctrl.length:i++){
+                	clear-main[i].className = clear-main[i].className
+                	.replace('main-i_active','');
+                	clear-ctrl[i].className = clear-ctrl[i].className
+                	.replace('ctrl-i_active','');
+                }
+                //5.4 为当前控制按钮和幻灯片附加样式
+                main.className += ' main-i_active';
+                ctrl.className += ' ctrl-i_active';
+
+           }
+        	//4.定义何时处理幻灯片输出
+        	window.onload = function(){
+        		addSlider();
+        		switchSlider(1);
+        	}
+        </script>-->
+    </div>
+</body>
+</html>
